@@ -70,7 +70,7 @@ if st.button("Submit"):
     if link:
         try:
             article_html = bypass_paywall(link)
-            st.container(article_html, unsafe_allow_html=True)
+            st.markdown(article_html, unsafe_allow_html=True)
         except requests.exceptions.RequestException as e:
             st.error(f"Error fetching the article: {e}")
     else:
